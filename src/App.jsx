@@ -1,41 +1,17 @@
-import { useState } from "react"
-
-function App(){
-
-  const [nome, setNome] = useState('Ronaldo')
-
-  const Formulario = (props) => {
-
-    return (
-      <div>
-         <input 
-      placeholder={props.sombra}
-      ClassName="nome"
-      onChange={(e)=>{setNome(e.target.value)}}
-      name="nome"
-      type="text" />
-      <button
-      onClick={()=>{(props.mensagem) ? alert(props.mensagem)
-         : alert("TEXTO PADRÃO")}}
-      className="botao">
-      {(props.textoBotao != null) ? props.textoBotao: "CLIQUE AQUI"}
-      </button>
-      </div>
-    ) 
-};
-
+import Produtos from "./pages/produtos";
+ 
+const App = () => {
+ 
   return (
-     <div>
-      <h3>Pizzaria 2C</h3>
-     <Formulario  sombra="Digite seu nome..." textoBotao="ENVIAR NOME"/>
-     <Formulario  sombra="Digite seu e-mail..." textoBotao="E-MAIL"/>
-     <Formulario  sombra="(11) 90000-0000" textoBotao="CELULAR"/>
-     <Formulario  mensagem="Mensagem enviada pelo App"/>
-     <Formulario />
-     <Formulario />
-     </div>
+    <div>
+      <h1>Projeto Pizzaria</h1>
+ 
+    <Produtos />
+ 
+    </div>
   );
-
-
+ 
+}
+ 
 export default App;
-0
+ 
